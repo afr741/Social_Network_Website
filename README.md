@@ -28,4 +28,4 @@ The website is built around the idea of displaying on a mobile browser along wit
 
 As of submission add friend, delete friend and location map works for all members. Locally there seems to be no problems running on any browser but on the mun server it seems as chrome may have a problem displaying map. Firefox seems to work fine.
 
-Website work was completed by Josh, Mahamad and Anush.
+Website work was completed by Anushervon Rakhmatov, Mohamad Hamadi and Josh Davis.
