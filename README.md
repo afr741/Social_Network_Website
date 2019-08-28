@@ -1,5 +1,5 @@
 # comp3715
-Social Media design project
+Social Media design project</br>
 LIVE VERSION is available here: https://thecirclesocmednetwork.herokuapp.com/</br>
 In order to install the required npm modules for the server, type npm install while in the same directory as the server and package.json file. 
 If this does not install all the required modules the commands to install them serperatley are:
