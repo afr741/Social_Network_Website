@@ -5,18 +5,18 @@ var bodyParser = require("body-parser");
 var app = express();
 var json = require('express-json');
 var geolocation = require('geolocation');
-
+var PORT= process.env.PORT || 8888;
 
 app.use('/',express.static('public'));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 /*********************************************
- * 
+ *
  * Post requests to handle the addition of friends
  * for each member
- * 
- * 
+ *
+ *
  *************************************/
 
 app.post('/addMohamad',function(req,res){    //post request for adding friends to Mahamad's page
@@ -25,9 +25,9 @@ app.post('/addMohamad',function(req,res){    //post request for adding friends t
 	console.log("The friend " +test + " was recieved by Post");
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	addF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/index.html');
 });
 
@@ -38,9 +38,9 @@ app.post('/addMike',function(req,res){           //post request for adding frien
 	console.log("The friend " +test + " was recieved by Post");
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	addF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/mike.html');
 });
 
@@ -51,9 +51,9 @@ app.post('/addMiley',function(req,res){        //post request for adding friends
 	console.log("The friend " +test + " was recieved by Post");
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	addF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/miley.html');
 });
 
@@ -64,22 +64,22 @@ app.post('/addJake',function(req,res){          //post request for adding friend
 	console.log("The friend " +test + " was recieved by Post");
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	addF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/jake.html');
 });
 
- 
+
 app.post('/addBrandon',function(req,res){      //post request for adding friends to Brandon's page
 	var test = req.body.friendList;
 	var linkk = "public/js/json/brandonFriends.json";
 	console.log("The friend " +test + " was recieved by Post");
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	addF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/brandon.html');
 });
 
@@ -90,9 +90,9 @@ app.post('/addKhloe',function(req,res){         //post request for adding friend
 	console.log("The friend " +test + " was recieved by Post");
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	addF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/khloe.html');
 });
 
@@ -103,9 +103,9 @@ app.post('/addJosh',function(req,res){           //post request for adding frien
 	console.log("The friend " +test + " was recieved by Post");
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	addF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/josh.html');
 });
 
@@ -116,9 +116,9 @@ app.post('/addCameron',function(req,res){          //post request for adding fri
 	console.log("The friend " +test + " was recieved by Post");
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	addF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/cameron.html');
 });
 
@@ -129,9 +129,9 @@ app.post('/addAmy',function(req,res){         //post request for adding friends 
 	console.log("The friend " +test + " was recieved by Post");
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	addF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/amy.html');
 });
 
@@ -142,18 +142,18 @@ app.post('/addLilly',function(req,res){         //post request for adding friend
 	console.log("The friend " +test + " was recieved by Post");
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	addF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/lilly.html');
 });
 
 /*********************************************
- * 
+ *
  * Post requests to handle the deletion of friends
  * for each member
- * 
- * 
+ *
+ *
  *************************************/
 
 /*app.post('/delete',function(req,res){
@@ -161,9 +161,9 @@ app.post('/addLilly',function(req,res){         //post request for adding friend
 	var link = "public/js/friends.json"
 	var contents = fs.readFileSync(link);
 	var t = JSON.parse(contents);
-	
+
 	deleteF(t,test,link);
-	
+
 	res.sendFile(__dirname + '/index.html');
 });*/
 
@@ -173,9 +173,9 @@ app.post('/deleteMohamad',function(req,res){       //post request for deleting a
 	var linkk = "public/js/json/mohamadFriends.json";
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	deleteF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/index.html');
 });
 
@@ -185,9 +185,9 @@ app.post('/deleteMike',function(req,res){				 //post request for deleting a frie
 	var linkk = "public/js/json/mikeFriends.json";
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	deleteF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/mike.html');
 });
 
@@ -197,9 +197,9 @@ app.post('/deleteLilly',function(req,res){			 //post request for deleting a frie
 	var linkk = "public/js/json/lillyFriends.json";
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	deleteF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/lilly.html');
 });
 
@@ -209,9 +209,9 @@ app.post('/deleteKhloe',function(req,res){			 //post request for deleting a frie
 	var linkk = "public/js/json/KhloeFriends.json";
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	deleteF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/khloe.html');
 });
 
@@ -221,9 +221,9 @@ app.post('/deleteBrandon',function(req,res){			 //post request for deleting a fr
 	var linkk = "public/js/json/brandonFriends.json";
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	deleteF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/brandon.html');
 });
 
@@ -233,9 +233,9 @@ app.post('/deleteAmy',function(req,res){			 //post request for deleting a friend
 	var linkk = "public/js/json/amyFriends.json";
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	deleteF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/amy.html');
 });
 
@@ -245,9 +245,9 @@ app.post('/deleteJosh',function(req,res){			 //post request for deleting a frien
 	var linkk = "public/js/json/joshFriends.json";
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	deleteF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/josh.html');
 });
 
@@ -257,9 +257,9 @@ app.post('/deleteCameron',function(req,res){			 //post request for deleting a fr
 	var linkk = "public/js/json/cameronFriends.json";
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	deleteF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/cameron.html');
 });
 
@@ -269,9 +269,9 @@ app.post('/deleteMiley',function(req,res){			 //post request for deleting a frie
 	var linkk = "public/js/json/mileyFriends.json";
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	deleteF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/mileycyr.html');
 });
 
@@ -281,18 +281,18 @@ app.post('/deleteJake',function(req,res){			 //post request for deleting a frien
 	var linkk = "public/js/json/jakeFriends.json";
 	var contents = fs.readFileSync(linkk);
 	var t = JSON.parse(contents);
-	
+
 	deleteF(t,test,linkk);
-	
+
 	res.sendFile(__dirname + '/jakecandar.html');
 });
 
 /*********************************************
- * 
+ *
  * Post requests to handle the location of friends
  * for each member
- * 
- * 
+ *
+ *
  *************************************/
 app.post('/locMohamad',function(req,res){
 	var test = req.body.locations;
@@ -406,11 +406,11 @@ app.get('/friendsjson',function(req,res){
 
 
 /*********************************************
- * 
+ *
  * Get requests to handle the display of the html code
  * correctly
- * 
- * 
+ *
+ *
  *************************************/
 
 
@@ -426,7 +426,7 @@ app.get('/brandonkelvin',function(req,res){
 
 app.get('/index',function(req,res){
 	res.sendFile(__dirname + '/index.html');
-	
+
 });
 
 
@@ -524,46 +524,46 @@ app.get('/cameron-location',function(req,res){
 
 
 
-app.listen(8888);  //shows what port the server is listening on
+app.listen(PORT);  //shows what port the server is listening on
 
 
 /*********************************************
- * 
+ *
  * Method to handle the adding friend to the json file
- * 
- * 
+ *
+ *
  *************************************/
 function addF(t,test,linkk){   //method to add a friend
 	var obj = t;  //stores current json friend list
 	var v = test; //stores friend to be added to json
 	var dup = false;  //boolean to check if its a duplicate add
-	
+
 	for(var i = 0;i<obj.length;i++){  //for loop to check if there are any duplicates
 		if(obj[i].name === v){
 			dup = true;
 		}
 	}
-	
+
 	if(dup){console.log("Tried to add duplicate");}
-	
+
 	else{
-	
+
 	obj.push({   //adds friend to json
 		name:test
 	});
-	
+
 	var a = JSON.stringify(obj);
-	
+
 	fs.writeFile(linkk, a, function(err) {  //writes the new list to the json file
 	    if(err) {
 	        return console.log(err);
 	    }
 
 	    console.log("The file was saved!");
-	}); 
+	});
 	}
-	
-	
+
+
 }
 /////////////////////////////////////
 function changeF(t,test, name){
@@ -571,7 +571,7 @@ function changeF(t,test, name){
 	var v = test;
 	for(var i =0;i<obj.length;i++){
 		if(obj[i].name == name){
-			obj[i].location = v;	
+			obj[i].location = v;
 		}
 	}
 	var a = JSON.stringify(obj);
@@ -580,7 +580,7 @@ function changeF(t,test, name){
 	        return console.log(err);
 	    }
 	    console.log("The file was saved!");
-	}); 
+	});
 }
 /////////////////////////////////////
 
@@ -588,34 +588,34 @@ function changeF(t,test, name){
 
 
 /*********************************************
- * 
+ *
  * Method to handle the deletion of a friend from the json file
- * 
- * 
+ *
+ *
  *************************************/
 
 function deleteF(t,test,link){   //method to delete a friend
 	var obj = t;   //stores current json friend list
 	var v = test;  //stores friend to be added to json
 	var obj1 =[];  //creates new array for copying the non deleted elements
-	
+
 	for(var i =0;i<obj.length;i++){
-			
-		
+
+
 		if(obj[i].name === v){  //checks if the obj is the one to delete
 			console.log("Object " + v +" is being deleted");
 		}
-		
+
 		else{
 			var n = obj[i].name;
 			console.log("Object " + n +" is not being deleted");
 			obj1.push({   //adds the non deleted friends to the new array
 				name:n
-			}); 
+			});
 		}
-		
+
 	}
-	
+
 	var a = JSON.stringify(obj1);
 	fs.writeFile(link, a, function(err) {  //writes the revised friend list back to json
 	    if(err) {
@@ -623,6 +623,6 @@ function deleteF(t,test,link){   //method to delete a friend
 	    }
 
 	    console.log("The file was saved!");
-	}); 
-	
+	});
+
 }
