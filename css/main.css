@@ -9,26 +9,30 @@ body {
   margin: 0;
   }
 
-body p { 
- margin: 0 20px; 
+body p {
+ margin: 0 20px;
  font-size: 1em;
 }
 #wrapper {
   margin: 0 auto;
   padding: 0 25%;
- 
+
 }
 
 #wrapper3{
   max-width: 940px;
   margin: 0 auto;
   padding: 0 5%;
-  
+
 }
 #members3{
   margin: 0;
   padding: 0;
   list-style: none;
+  .li{
+    display: flex;
+    justify-content: center;
+  }
 }
 #members3 li {
   float: left;
@@ -51,17 +55,17 @@ body p {
   margin: 0 auto;
   padding: 0 25%;
   background-color: yellow;
-  
- 
+
+
 }
 #wrapper2 li {
-  
+
   float: left;
   width: 45%;
   margin: 2.5%;
-  
+
   color: #bdc3c7;
- 
+
 }
 #wrapper2 ul {
   background-color: yellow;
@@ -85,8 +89,8 @@ img{
 
 
 #pic{
- width: 100%; 
- 
+ width: 100%;
+
 }
 
 /*******************************
@@ -94,11 +98,11 @@ img{
 ********************************/
 
 header {
- 
+
  margin: 0 0 30px 0;
  padding: 5px 0 0 0 ;
- width: 100%; 
-  
+ width: 100%;
+
 }
 #logo {
  text-align: center;
@@ -112,11 +116,11 @@ h1 {
   font-size: 2.1em;
   font-weight: normal;
   line-height: 0.9em;
-  
+
 }
 
 h2 {
-  
+
   font-size: 1.8em;
   margin: -5px 0 0;
   font-weight: normal;
@@ -129,8 +133,8 @@ h2 {
 nav{
   text-align: center;
   padding: 10px 0;
-  margin: 20px 0 0; 
-   
+  margin: 20px 0 0;
+
 }
 
 nav ul {
@@ -140,24 +144,24 @@ nav ul {
 }
 
 nav li {
-padding: 5px 0;  
+padding: 5px 0;
 
 }
 
 nav a {
  font-weight: 750;
   padding: 14px 12px;
-  
+
 }
 
 /*******************************
            FOOTER
 ********************************/
 
-footer { 
+footer {
   font-size: 0.8em;
   text-align: center;
-  
+
   padding-top: 50px;
   color: #CCCCCC;
   clear: both;
@@ -191,7 +195,7 @@ h1,h2 {
   color:#FFFFFF;
 }
 
-/* nav background */ 
+/* nav background */
 nav{
   background: #DD0000;
 }
@@ -209,11 +213,11 @@ nav a.selected , nav a:hover {
 #members{
   margin: 0;
   padding: 0;
- 
+
 
 }
 #members li {
- 
+
   width: 25%;
   margin: 2%;
   background-color: #f5f5f5;
@@ -289,8 +293,8 @@ nav a.selected , nav a:hover {
 /*******************************
             Profile page
 ********************************/
-#sizing { 
- width: 50%; 
+#sizing {
+ width: 50%;
   margin: 0 5px 0 5px;
   padding: 0px 3px;
 }
@@ -314,7 +318,7 @@ padding: 7px 5px;
   margin: 5px 5px;
 padding: 7px 5px;
 }
- 
+
 
 }
 styling{
@@ -335,7 +339,7 @@ styling{
 #s2{
   list-style: none;
  float: top;
-  
+
   padding: 3px 5px;
 }
 
@@ -343,7 +347,7 @@ styling{
 display: block;
 max-width: 150px;
 margin: 0 auto 30px;
-border-radius:30%;  
+border-radius:30%;
 }
 /*******************************
             Location page
@@ -351,7 +355,7 @@ border-radius:30%;
 
 #sty{
   background-color: yellow;
-  
+
   width:90%;
   text-align: center;
   margin-left: 10px;
@@ -359,7 +363,7 @@ border-radius:30%;
 }
 #newsty{
  float: left;
-  clear: left; 
+  clear: left;
 }
 
 table {
@@ -378,5 +382,3 @@ td, th {
 tr:nth-child(even) {
     background-color: #caf5f7;
 }
-
-
